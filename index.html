@@ -9,11 +9,15 @@
       height: 200px;
       width: 200px;
     }
+
+    [v-cloak] {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
-  <div id="app">
+  <div id="app" v-cloak>
     {{ greeting }}
     <!-- v-model binds the passed parameter  -->
     <input v-model="greeting" />
