@@ -18,7 +18,7 @@
 
 <body>
   <div id="app" v-cloak>
-    {{ greeting }}
+    <login-form />
     <!-- v-model binds the passed parameter  -->
     <input @keyup.enter="greet" v-model="greeting" />
 
@@ -48,6 +48,14 @@
           console.log(this.greeting)
         }
       }
+    })
+    app.component('login-form', {
+      template: `
+        <div>
+          <input type="email" />
+          <input type="password" />
+        </div>
+      `
     })
     app.mount('#app')
   </script>
