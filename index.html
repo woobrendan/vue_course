@@ -56,15 +56,21 @@
     })
     app.component('login-form', {
       template: `
-        <form>
+        <form @submit.prevent="handleSubmit">
           <h1>{{ title }}</h1>
           <input type="email" />
           <input type="password" />
+          <button>Log In</button>
         </form>
       `,
       data() {
         return {
           title: 'Login Form'
+        }
+      },
+      methods: {
+        handleSubmit() {
+          console.log('Submitted')
         }
       }
     })
