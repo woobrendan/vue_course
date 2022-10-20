@@ -90,10 +90,10 @@
       computed: {
         inputValue: {
           get() {
-            return this.modeValue
+            return this.modelValue
           },
-          set() {
-
+          set(value) {
+            this.$emit('update:modelValue', value)
           }
         }
       },
