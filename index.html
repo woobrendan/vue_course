@@ -54,6 +54,7 @@
         }
       }
     })
+    // <p v-for="(str, i) in inputs" :key="i">{{ str }}</p>
     app.component('login-form', {
       template: `
         <form @submit.prevent="handleSubmit">
@@ -67,6 +68,18 @@
       data() {
         return {
           title: 'Login Form',
+          inputs: [
+            {
+              label: 'Email',
+              value: '',
+              type: 'email'
+            },
+            {
+              label: 'Password',
+              value: '',
+              type: 'password'
+            }
+          ],
           email: '',
           password: '',
           emailLabel: 'Email',
