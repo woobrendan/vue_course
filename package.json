@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "lint": "^0.7.0",
+    "sasslint": "^0.0.10",
     "serve": "^14.0.1"
   }
 }
